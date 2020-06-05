@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trello</title>
+</head>
+
+<body>
+    <div class="trello">
+        <div class="trello__container">
+            <!-- section 1 -->
+            <section class="item" draggable="true">
+                <p class="item__header" contenteditable="true">В плане</p>
+                <div class="item__container">
+                    <div class="item__todo" draggable="true">Lorem, ipsum dolor.</div>
+                    <div class="item__todo" draggable="true">Lorem, ipsum dolor.</div>
+                    <div class="item__todo" draggable="true">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                        Dolorum, quod.</div>
+                </div>
+                <div class="item__footer">
+                    <button class="item__new-button">
+                        Добавить еще одну карточку
+                    </button>
+                </div>
+            </section>
+            <!-- section 2 -->
+            <section class="item" draggable="true">
+                <p class="item__header" contenteditable="true">В плане</p>
+                <div class="item__container">
+                    <div class="item__todo" draggable="true">Lorem, ipsum dolor.</div>
+                    <div class="item__todo" draggable="true">Lorem, ipsum dolor.</div>
+                    <div class="item__todo" draggable="true">Lorem, ipsum dolor.</div>
+                    <div class="item__todo item__todo--drag" draggable="true">Lorem, ipsum dolor.</div>
+                    <div class="item__todo" draggable="true">Lorem, ipsum dolor.</div>
+                    <div class="item__todo" draggable="true">Lorem, ipsum dolor.</div>
+                </div>
+                <div class="item__footer">
+                    <textarea class="item__todo" placeholder="Введите название карточки"></textarea>
+                    <div class="item__action">
+                        <button class="item__add-button">Добавить карточку</button>
+                        <button class="item__cancel-button"></button>
+                    </div>
+                </div>
+            </section>
+            <!-- section 3 -->
+            <section class="item" draggable="true">
+                <div class="item__footer">
+                    <button class="item__new-button">
+                        Добавить еще одну колонку
+                    </button>
+                </div>
+            </section>
+        </div>
+    </div>
+</body>
+
+</html>

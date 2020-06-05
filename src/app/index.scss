@@ -1,0 +1,115 @@
+@import "../style/variables.scss";
+
+.trello {
+    background-image: url($bg-image);
+    box-sizing: border-box;
+    height: 100vh;
+    padding: $indent;
+    overflow-x: scroll;
+
+    &__container {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        height: 100%;
+    }
+}
+
+.item {
+    min-width: 272px;
+    max-width: 272px;
+    width: 100%;
+    background: $main-color;
+    border-radius: $radius;
+    margin: $indent;
+    padding: $small-indent $indent;
+
+    &__header {
+        font-weight: bold;
+        font-size: $font-size;
+        margin-bottom: 12px;
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+
+    &__todo {
+        background: #fff;
+        border: none;
+        margin-bottom: $small-indent;
+        padding: $small-indent $indent;
+        font-weight: normal;
+        font-size: $font-size;
+        line-height: 19px;
+        border-radius: $radius;
+        box-shadow: $shadow-normal;
+        resize: none;
+        cursor: pointer;
+
+        &--drag {
+            transform: translateX(23px) rotate(5deg) translateY(5px);
+        }
+
+        &:hover {
+            background: darken(#fff, 10%);
+        }
+    }
+
+    &__footer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__new-button {
+        width: 100%;
+        border: none;
+        background: transparent;
+        font-size: $font-size;
+        color: $button-color;
+        padding: $small-indent 0;
+        border-radius: $radius;
+        text-align: left;
+        cursor: pointer;
+
+        &::before {
+            content: "➕";
+        }
+
+        &:hover {
+            background: darken(#fff, 20%);
+        }
+    }
+
+    &__action {
+        margin-top: $small-indent;
+        display: flex;
+    }
+
+    &__add-button {
+        border: none;
+        color: #fff;
+        font-weight: bold;
+        font-size: $font-size;
+        border-radius: $radius;
+        padding: $small-indent $indent;
+        background: $button-add;
+        cursor: pointer;
+
+        &:hover {
+            background: lighten($button-add, 10%);
+        }
+    }
+
+    &__cancel-button {
+        border: none;
+        background: transparent;
+        margin-left: auto;
+        cursor: pointer;
+        &::before {
+            content: "✖️";
+        }
+    }
+}
