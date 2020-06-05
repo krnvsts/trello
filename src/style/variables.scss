@@ -1,5 +1,8 @@
 $bg-image: 'https://images.unsplash.com/photo-1446071103084-c257b5f70672?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=900&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=80&w=1600';
 
+// width
+$item-width: 272px;
+
 // indent
 $small-indent: 8px;
 $indent: 12px;
@@ -12,8 +15,12 @@ $radius: 3px;
 
 // color
 $main-color: #DFE3E6;
+$main-hover: #d0d4e4;
 $button-color: #6B808C;
 $button-add: #39C071;
 
 // shadow
 $shadow-normal: 0px 1px 4px rgba(9, 45, 66, 0.25);
+
+// transition
+$transition: .3s;

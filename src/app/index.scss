@@ -16,8 +16,8 @@
 }
 
 .item {
-    min-width: 272px;
-    max-width: 272px;
+    min-width: $item-width;
+    max-width: $item-width;
     width: 100%;
     background: $main-color;
     border-radius: $radius;
@@ -46,21 +46,29 @@
         line-height: 19px;
         border-radius: $radius;
         box-shadow: $shadow-normal;
+        transition: $transition;
         resize: none;
-        cursor: pointer;
+        cursor: grabbing;
 
         &--drag {
             transform: translateX(23px) rotate(5deg) translateY(5px);
         }
 
         &:hover {
-            background: darken(#fff, 10%);
+            background: $main-hover;
         }
     }
 
     &__footer {
         display: flex;
         flex-direction: column;
+    }
+
+    &__input {
+        cursor: text;
+        &:hover {
+            background: #fff;
+        }
     }
 
     &__new-button {
@@ -72,6 +80,7 @@
         padding: $small-indent 0;
         border-radius: $radius;
         text-align: left;
+        transition: $transition;
         cursor: pointer;
 
         &::before {
@@ -79,7 +88,7 @@
         }
 
         &:hover {
-            background: darken(#fff, 20%);
+            background: $main-hover;
         }
     }
 
@@ -96,10 +105,11 @@
         border-radius: $radius;
         padding: $small-indent $indent;
         background: $button-add;
+        transition: $transition;
         cursor: pointer;
 
         &:hover {
-            background: lighten($button-add, 10%);
+            background: lighten($button-add, 8%);
         }
     }
 
@@ -111,5 +121,29 @@
         &::before {
             content: "✖️";
         }
+    }
+}
+
+.adder {
+    min-width: $item-width;
+    max-width: $item-width;
+    width: 100%;
+    border-radius: $radius;
+    margin: $indent;
+    padding: $indent;
+    border: none;
+    background: $main-color;
+    font-size: $font-size;
+    color: $button-color;
+    text-align: left;
+    transition: $transition;
+    cursor: pointer;
+
+    &::before {
+        content: "➕";
+    }
+
+    &:hover {
+        background: $main-hover;
     }
 }

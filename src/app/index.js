@@ -4,6 +4,8 @@ import 'normalize.css';
 import '../style/main.scss';
 import './index.scss';
 
-elements.map(element => {
-    console.log(element)
-});
+let noteIdCounter = 7
+let columnIdCounter = 3
+
+console.log("Следующяя заметка - " + noteIdCounter)
+console.log("Следующяя колонка - " + columnIdCounter)

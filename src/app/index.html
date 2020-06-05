@@ -11,33 +11,34 @@
     <div class="trello">
         <div class="trello__container">
             <!-- section 1 -->
-            <section class="item" draggable="true">
+            <section class="item" draggable="true" data-column-id="1">
                 <p class="item__header" contenteditable="true">В плане</p>
-                <div class="item__container">
-                    <div class="item__todo" draggable="true">Lorem, ipsum dolor.</div>
-                    <div class="item__todo" draggable="true">Lorem, ipsum dolor.</div>
-                    <div class="item__todo" draggable="true">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                <div class="item__container" data-notes>
+                    <div class="item__todo" draggable="true" data-note-id="1">Lorem, ipsum dolor.</div>
+                    <div class="item__todo" draggable="true" data-note-id="2">Lorem, ipsum dolor.</div>
+                    <div class="item__todo" draggable="true" data-note-id="3">Lorem, ipsum dolor sit amet consectetur
+                        adipisicing elit.
                         Dolorum, quod.</div>
                 </div>
                 <div class="item__footer">
-                    <button class="item__new-button">
+                    <button class="item__new-button" data-action-addnote>
                         Добавить еще одну карточку
                     </button>
                 </div>
             </section>
             <!-- section 2 -->
-            <section class="item" draggable="true">
+            <section class="item" draggable="true" data-column-id="2">
                 <p class="item__header" contenteditable="true">В плане</p>
-                <div class="item__container">
-                    <div class="item__todo" draggable="true">Lorem, ipsum dolor.</div>
-                    <div class="item__todo" draggable="true">Lorem, ipsum dolor.</div>
-                    <div class="item__todo" draggable="true">Lorem, ipsum dolor.</div>
-                    <div class="item__todo item__todo--drag" draggable="true">Lorem, ipsum dolor.</div>
-                    <div class="item__todo" draggable="true">Lorem, ipsum dolor.</div>
-                    <div class="item__todo" draggable="true">Lorem, ipsum dolor.</div>
+                <div class="item__container" data-notes>
+                    <div class="item__todo" draggable="true" data-note-id="1">Lorem, ipsum dolor.</div>
+                    <div class="item__todo" draggable="true" data-note-id="2">Lorem, ipsum dolor.</div>
+                    <div class="item__todo" draggable="true" data-note-id="3">Lorem, ipsum dolor.</div>
+                    <div class="item__todo item__todo--drag" draggable="true" data-note-id="4">Lorem, ipsum dolor.</div>
+                    <div class="item__todo" draggable="true" data-note-id="5">Lorem, ipsum dolor.</div>
+                    <div class="item__todo" draggable="true" data-note-id="6">Lorem, ipsum dolor.</div>
                 </div>
                 <div class="item__footer">
-                    <textarea class="item__todo" placeholder="Введите название карточки"></textarea>
+                    <textarea class="item__todo item__input" placeholder="Введите название карточки"></textarea>
                     <div class="item__action">
                         <button class="item__add-button">Добавить карточку</button>
                         <button class="item__cancel-button"></button>
@@ -45,12 +46,8 @@
                 </div>
             </section>
             <!-- section 3 -->
-            <section class="item" draggable="true">
-                <div class="item__footer">
-                    <button class="item__new-button">
-                        Добавить еще одну колонку
-                    </button>
-                </div>
+            <section class="adder" draggable="true" data-action-addcolumn>
+                Добавить еще одну колонку
             </section>
         </div>
     </div>

@@ -1,10 +1,7 @@
 import './elements.scss';
 
 let elements = [
-    'Hydrogen',
-    'Helium',
-    'Lithium',
-    'Beryllium'
+    console.log("Hi, im element")
 ];
 
 
